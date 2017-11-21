@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+
+<!-- 不使用namespace的话sql搜索定位会比较方便 -->
+<mapper namespace="com.abjr.p2p.dao.MpRuleDao">
+
+    <resultMap id="MpRule" type="com.abjr.p2p.model.MpRule">
+        <result property="id" column="ID"/>
+    </resultMap>
+
+    <select id="getRuleList" resultMap="MpRule">
+        select id from Mp_rule
+    </select>
+</mapper>
+
